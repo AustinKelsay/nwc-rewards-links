@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@getalby/sdk": "^3.5.0",
     "@prisma/client": "^5.13.0",
+    "axios": "^1.6.8",
     "next": "14.2.3",
     "primeicons": "^6.0.1",
     "primereact": "^10.2.1",

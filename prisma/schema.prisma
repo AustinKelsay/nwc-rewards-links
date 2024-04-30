@@ -9,11 +9,10 @@ generator client {
 
 model NWC {
   id            String   @id @default(cuid())
-  name          String?
-  requestMethods String[]
-  expiresAt     DateTime?
-  maxAmount     Int?
-  budgetRenewal BudgetRenewal?
+  name          String
+  url           String
+  expiresAt     DateTime
+  maxAmount     Int
   rewardLinks   RewardLink[]
 }
 
@@ -24,12 +23,4 @@ model RewardLink {
   amount    Int
   used      Boolean  @default(false)
   createdAt DateTime @default(now())
-}
-
-enum BudgetRenewal {
-  NEVER
-  DAILY
-  WEEKLY
-  MONTHLY
-  YEARLY
 }

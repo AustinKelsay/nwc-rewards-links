@@ -1,14 +1,10 @@
--- CreateEnum
-CREATE TYPE "BudgetRenewal" AS ENUM ('NEVER', 'DAILY', 'WEEKLY', 'MONTHLY', 'YEARLY');
-
 -- CreateTable
 CREATE TABLE "NWC" (
     "id" TEXT NOT NULL,
-    "name" TEXT,
-    "requestMethods" TEXT[],
-    "expiresAt" TIMESTAMP(3),
-    "maxAmount" INTEGER,
-    "budgetRenewal" "BudgetRenewal",
+    "name" TEXT NOT NULL,
+    "url" TEXT NOT NULL,
+    "expiresAt" TIMESTAMP(3) NOT NULL,
+    "maxAmount" INTEGER NOT NULL,
 
     CONSTRAINT "NWC_pkey" PRIMARY KEY ("id")
 );
